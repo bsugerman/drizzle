@@ -322,11 +322,13 @@ FCT_BGN_FN(utest_cdrizzle)
         FCT_TEST_BGN(utest_map_lookup_01)
         {
             struct driz_param_t *p;
+            double x;
+            double y;
             p = setup_parameters();
             stretch_pixmap(p, 1000.0);
             
-            double x = get_pixmap(p->pixmap, 1, 1)[0];
-            double y = get_pixmap(p->pixmap, 1, 1)[1];
+            x = get_pixmap(p->pixmap, 1, 1)[0];
+            y = get_pixmap(p->pixmap, 1, 1)[1];
             
             fct_chk_eq_dbl(x, 1.0);
             fct_chk_eq_dbl(y, 1000.0);
@@ -338,11 +340,14 @@ FCT_BGN_FN(utest_cdrizzle)
         FCT_TEST_BGN(utest_map_lookup_02)
         {
             struct driz_param_t *p;
+            double x;
+            double y;
+          
             p = setup_parameters();
             stretch_pixmap(p, 1000.0);
             
-            double x = get_pixmap(p->pixmap, 3, 0)[0];
-            double y = get_pixmap(p->pixmap, 3, 0)[1];
+            x = get_pixmap(p->pixmap, 3, 0)[0];
+            y = get_pixmap(p->pixmap, 3, 0)[1];
 
             fct_chk_eq_dbl(x, 3.0);
             fct_chk_eq_dbl(y, 0.0);
@@ -354,11 +359,14 @@ FCT_BGN_FN(utest_cdrizzle)
         FCT_TEST_BGN(utest_map_lookup_03)
         {
             struct driz_param_t *p;
+            double x;
+            double y;
+
             p = setup_parameters();
             stretch_pixmap(p, 1000.0);
             
-            double x = get_pixmap(p->pixmap, 0, 1)[0];
-            double y = get_pixmap(p->pixmap, 0, 1)[1];
+            x = get_pixmap(p->pixmap, 0, 1)[0];
+            y = get_pixmap(p->pixmap, 0, 1)[1];
             fct_chk_eq_dbl(x, 0.0);
             fct_chk_eq_dbl(y, 1000.0);
             
@@ -369,11 +377,14 @@ FCT_BGN_FN(utest_cdrizzle)
         FCT_TEST_BGN(utest_map_lookup_04)
         {
             struct driz_param_t *p;
+            double x;
+            double y;
+        
             p = setup_parameters();
             stretch_pixmap(p, 1000.0);
             
-            double x = get_pixmap(p->pixmap, 3, 1)[0];
-            double y = get_pixmap(p->pixmap, 3, 1)[1];
+            x = get_pixmap(p->pixmap, 3, 1)[0];
+            y = get_pixmap(p->pixmap, 3, 1)[1];
             fct_chk_eq_dbl(x, 3.0);
             fct_chk_eq_dbl(y, 1000.0);
             
