@@ -39,7 +39,7 @@
 #warning "FCTX version is not one that pandokia.h is tested with."
 #endif
 
-#include <sys/time.h>
+#include "time.h"
 
 /*
  * each logger has to have one of these.
