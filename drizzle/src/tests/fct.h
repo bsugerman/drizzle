@@ -210,7 +210,7 @@ that follows the ISO C++ conformant naming convention. */
 #    define STDOUT_FILENO 1
 #    define STDERR_FILENO 2
 #else
-#    include <unistd.h>
+#    include <io.h>
 #    define _fct_pipe  pipe
 #    define _fct_dup   dup
 #    define _fct_dup2  dup2
