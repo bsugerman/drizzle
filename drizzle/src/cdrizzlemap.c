@@ -240,6 +240,7 @@ interpolation_bounds(
   int ipix = 0;
   int jdim = (idim + 1) % 2;
   int *xyptr = xypix;
+  double pixval;
   
   /* Starting point rounds down input pixel position
    * to integer value
@@ -278,7 +279,7 @@ interpolation_bounds(
 
         /* Check if the pixel value is NaN */ 
         oob_pixel(pixmap, xy[0], xy[1]); 
-        double pixval = get_pixmap(pixmap, xy[0], xy[1])[idim];
+        pixval = get_pixmap(pixmap, xy[0], xy[1])[idim];
     
         /* If not, copy it to output as a good point */
         if (! npy_isnan(pixval)) {
